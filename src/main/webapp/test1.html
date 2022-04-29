@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Slider
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/29
+  Time(创建时间)： 20:36
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .el-slider {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-slider v-model="value1" @change="change1">
+
+    </el-slider>
+    <br>
+    <el-slider v-model="value2" @change="change2" :show-tooltipss="false">
+
+    </el-slider>
+    <br>
+    <el-slider v-model="value3" @change="change3" :max="1000" :min="100">
+
+    </el-slider>
+    <br>
+    <el-slider v-model="value4" @change="change4" :format-tooltip="format">
+
+    </el-slider>
+    <br>
+    <el-slider v-model="value5" @change="change5" :disabled="true">
+
+    </el-slider>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            value1: 12,
+            value2: 6,
+            value3: 596,
+            value4: 9,
+            value5: 87,
+        },
+        methods: {
+            change1: function ()
+            {
+                console.log(this.value1);
+            }
+            ,
+            change2: function ()
+            {
+                console.log(this.value2);
+            }
+            ,
+            change3: function ()
+            {
+                console.log(this.value3);
+            }
+            ,
+            change4: function ()
+            {
+                console.log(this.value4);
+            }
+            ,
+            format: function (value)
+            {
+                return value / 10;
+            }
+            ,
+            change5: function ()
+            {
+                console.log(this.value5);
+            }
+
+        },
+        mounted()
+        {
+
+        }
+    })
+</script>
+</body>
+</html>
