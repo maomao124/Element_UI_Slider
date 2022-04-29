@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Slider
+  File name(文件名): test3
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/29
+  Time(创建时间)： 20:56
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .el-slider {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-slider v-model="value1" :show-input="true" @change="change1">
+
+    </el-slider>
+    <br>
+    <el-slider v-model="value2" :show-input="true" @change="change2" :step="10" :show-stops="true">
+
+    </el-slider>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            value1: 12,
+            value2: 6,
+        },
+        methods: {
+            change1: function ()
+            {
+                console.log(this.value1);
+            }
+            ,
+            change2: function ()
+            {
+                console.log(this.value2);
+            }
+
+        },
+        mounted()
+        {
+
+        }
+    })
+</script>
+</body>
+</html>
